@@ -1,0 +1,10 @@
+.addv{
+    background-color: brown;
+    height: 400px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding: 20px;
+}
+.addv div{
+    padding-bottom: 10px;
+}
