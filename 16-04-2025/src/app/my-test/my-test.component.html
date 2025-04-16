@@ -1,0 +1,17 @@
+<div *ngIf="showDiv==true">
+    My text
+</div>
+<button (click)="ToggleDiv()">Toggle text</button>
+<!-- <div *ngFor="let pm of IndiaPmList;let idx=index">
+{{idx+1}}-{{pm}}
+</div> -->
+<ol>
+    <li  *ngFor="let pm of IndiaPmList; let indx=index">
+        <div>{{pm}}<button class="btn btn-link" (click)="RemoveItem(indx)">X</button></div>
+    </li>
+</ol>
+<form>
+    <input type="text" name="pmname" [(ngModel)]="newPmName"/>
+    <button (click)="AddNewEntry()">Add New Entry</button>
+    <div *ngIf="ispresent">Already exists</div>
+</form>
