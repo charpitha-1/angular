@@ -1,0 +1,21 @@
+.cuslist{
+    background-color: blueviolet;
+    height:300px;
+    padding: 20px;
+}
+.addcus{
+    background-color: brown;
+    height: 400px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding: 20px;
+}
+div{
+    padding:10px;
+}
+.Chennaistyle{
+    background-color: aqua;
+}
+.sStyle{
+background-color: rgb(202, 202, 19);
+}

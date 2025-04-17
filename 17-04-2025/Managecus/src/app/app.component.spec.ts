@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'UserInteraction'`, () => {
+  it(`should have as title 'ManageCustomer'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('UserInteraction');
+    expect(app.title).toEqual('ManageCustomer');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('UserInteraction app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('ManageCustomer app is running!');
   });
 });

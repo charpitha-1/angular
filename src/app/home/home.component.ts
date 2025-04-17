@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserInfo } from '../user-info';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  TaskEntry:UserInfo[]=[];
+  OnChildEvent(msg:UserInfo){
+    this.TaskEntry.push(msg);
+  }
 }

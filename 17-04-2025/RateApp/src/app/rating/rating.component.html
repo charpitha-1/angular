@@ -1,0 +1,6 @@
+<span *ngFor="let num of ratingArray ;let indx=index" class="starStyle" (click)="SelectStar(indx)" [class]="GetStarStyle(indx)">
+    &star;
+</span>
+<div>
+    Selected Rating:{{currentRating+1}}
+</div>

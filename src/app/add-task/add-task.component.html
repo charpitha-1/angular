@@ -1,0 +1,23 @@
+<form>
+    <label>
+        TaskId
+    </label>
+    <input type="number" name="taskid" [(ngModel)]="taskId"/>
+    <br>
+    <label>
+        TaskTitle
+    </label>
+    <input type="text" name="tasktitle" [(ngModel)]="taskTitle"/>
+    <br>
+    <label>
+        Task Duration
+    </label>
+    <input type="number" min="1" name="taskDuration" [(ngModel)]="taskDuration"/>
+    <br>
+    <label>
+        Task Status
+    </label>
+    <input type="text" name="taskStatus" [(ngModel)]="taskStatus"/>
+    <br>
+    <button (click)="AddTaskData()">AddTask</button>
+</form>

@@ -1,0 +1,51 @@
+<div class="container-fluid home">
+    <div >
+            <table width="40%">
+                <thead>
+                    <tr>
+                        <th>
+                            Customer Id
+                        </th>
+                        <th>
+                            Customer Name
+                        </th>
+                        <th>
+                            Location
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let newCus of CustomerEntry;let i=index"[style]="GetStyleObject(newCus.location,newCus.customerName)">
+                        <td>{{ newCus.customerId }}</td>
+                        <td>{{ newCus.customerName }}</td>
+                        <td>{{ newCus.location }}</td>
+                        <td><button class="btn btn-link" (click)="RemoveCus(i)">delete</button></td>
+                    </tr>
+                    <footer *ngIf="CustomerEntry.length==0">No Records Found</footer>
+                </tbody>
+                </table>
+        </div>
+        <hr>
+    <div class="addcus">
+            <form>
+                <div class="form-group">
+                    <label class="form-control">Customer Id</label>
+                    <input type="number" name="custId" [(ngModel)]="custId" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control">Customer  Name</label>
+                    <input type="text"  name="cutsName" [(ngModel)]="custName" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control">Location</label>
+                    <input type="text" name="loc" [(ngModel)]="loc" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" (click) ="OncustomerAdd()">Add Data</button>
+                </div>
+            </form>
+        </div>
+</div>
