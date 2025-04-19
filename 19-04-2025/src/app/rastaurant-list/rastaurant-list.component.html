@@ -1,0 +1,45 @@
+<h3>Restaurant List</h3>
+<div class="row">
+    <div class="col-lg-12">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>
+                        Location
+                    </th>
+                    <th>
+                        MinOrder
+                    </th>
+                    <th>
+                        Discount
+                    </th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let r of RestaurantData" [appMarkElement]="'tomato'" [refVal]="r.restStatus">
+                    <td>
+                        {{r.restId}}
+                    </td>
+                    <td>
+                        {{r.restName|titlecase}}
+                    </td>
+                    <td>
+                        {{r.restLoc|uppercase}}
+                    </td>
+                    <td>
+                        {{r.restMinOrder|currency}}
+                    </td>
+                    <td>
+                        {{r.restDiscount|percent}}
+                    </td>
+                    <td>
+                        {{r.restStatus|myStatus}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

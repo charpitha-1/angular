@@ -1,0 +1,26 @@
+<h3>Manage Restaurants</h3>
+<h4>Add New Restaurant</h4>
+<hr>
+<form>
+    <div class="form-group">
+        <label class="form-label">Restaurant Id:</label>
+        <input type="text"  name="restId" class="form-control" [(ngModel)]="restId"/>
+    </div> 
+    <div class="form-group">
+        <label class="form-label">Restaurant Name:</label>
+        <input type="text" name="restName" class="form-control" [(ngModel)]="restName"/>
+    </div>
+    <div class="form-group">
+        <label class="form-label">Restaurant Location:</label>
+        <input type="text" name="restLoc" class="form-control" [(ngModel)]="restLoc"/>
+    </div>
+    
+    <div class="form-group">
+        <label class="form-label"> Is Actice:</label>
+        <input type="checkbox"  name="restStatus" class="form-check"[(ngModel)]="restStatus" />
+    </div>
+    <div>
+        <button (click)="AddRestaurant()" class="btn btn-primary">Add Restaurant</button>
+    </div>
+</form>
+<app-rastaurant-list  [RestaurantData]="restaurantArray" ></app-rastaurant-list>
